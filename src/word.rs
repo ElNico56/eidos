@@ -297,46 +297,53 @@ static REFERENCE_SPELLS: &[&[Word]] = &[
     &[Wi, Na, Ma, Ki, Sa, Vu],
     &[Te, Ki, Sa, Vu],
     &[Ti, Pe, Mo, Sa, Pi, Mo, Sa, Ma, Ma, Ra],
-    &[Le, Ke, Sa, Vu],
-    &[Le, Ke, Sa, Wu],
     &[Te, Li, Ma, Wi, Na, Ma, Ki, Sa, Vu],
-    &[Ve, Sa],
-    &[Vi, Sa],
-    &[Mo, We, Sa],
-    &[Te, Ta, Ma],
-    &[Ta, Tu, Ma],
-    &[Ta, Ti, Ma],
-    &[Tu, Tu, Ma],
-    &[Tu, Ti, Ma],
-    &[Se, Pe, Na, Ma],
-    &[Si, Pi, Na, Ma],
-    &[Se, Mo, Sa],
-    &[Si, Mo, Sa],
-    &[Se, Ke],
-    &[Si, Ki],
-    &[Sa, Lo],
-    &[Sa, Mu],
-    &[Sa, Nu],
-    &[To, Mi],
-    &[To, Me],
-    &[Ko, Sa],
-    &[Ma, Ka],
-    &[Ve, Mu],
-    &[Vi, Mu],
-    &[Re, Ka],
+    &[Mo, We, Sa], // mul by derivative
+    &[Te, Ta, Ma], // 10 + 5
+    &[Ta, Tu, Ma], // 5 + 2
+    &[Ta, Ti, Ma], // 5 + 1
+    &[Tu, Tu, Ma], // 2 + 2
+    &[Tu, Ti, Ma], // 2 + 1
+    &[Te, Te, Sa], // 10 * 10
+    &[Te, Ta, Sa], // 10 * 5
+    &[Te, Tu, Sa], // 10 * 2
+    &[Se, Mo, Sa], // x squared
+    &[Si, Mo, Sa], // y squared
+    &[Ve, Sa], // mul by L click
+    &[Vi, Sa], // mul by R click
+    &[Ke, Le, Sa], // H slider vector field
+    &[Ki, Li, Sa], // V slider vector field
+    &[Ke, Se, Sa], &[Se, Ke, Sa], // x vector field
+    &[Ki, Si, Sa], &[Si, Ki, Sa], // y vector field
+    &[Ke, Pe, Na, Sa], // mouse x vector field
+    &[Ki, Pi, Na, Sa], // mouse y vector field
+    &[To, Mi], // min(0,v)
+    &[To, Me], // max(0,v)
+    &[Ro], // in from density field
+    &[Wi], // in from elevation field
+    &[Lu], // in from temperature field
+    &[Ko], // in from disorder field
+    &[Re], // in from memory field
+    &[Sa, Lo], &[Ma, Lo], // out to heat field
+    &[Sa, Mu], &[Ma, Mu], // out to order field
+    &[Sa, Nu], &[Ma, Nu], // out to anchor field
+    &[Sa, Vu], &[Ma, Vu], // out to gravity field
+    &[Sa, Wu], &[Ma, Wu], // out to force field
+    &[Sa, Ri], &[Ma, Ri], // out to memory field
 ];
 static GROUPS: &[&[Word]] = &[
-    &[To, Ti, Tu, Ta, Te],
-    &[Se, Si],
-    &[Ke, Ki],
-    &[Pe, Pi],
-    &[Su, Ku],
-    &[Le, Li],
-    &[Vu, Wu],
-    &[Ru, Vo],
-    &[Mi, Me],
-    &[Re, Ri],
-    &[Ve, Vi],
+    &[To, Ti, Tu, Ta, Te], // number constants
+    &[Se, Si], // x, y scalar fields
+    &[Ke, Ki], // i, j basis vector fields
+    &[Pe, Pi], // mouse x, y scalar fields
+    &[Su, Ku], // distance and angle fields
+    &[Le, Li], // sliders
+    &[Ro, Wi, Lu, Ko, Re], // input fields
+    &[Lo, Mu, Nu, Vu, Wu, Ri], // output fields
+    &[No, Ru, Vo], // stack manipulation
+    &[Mi, Me], // min, max
+    &[Re, Ri], // read, write
+    &[Ve, Vi], // mouse clicks
 ];
 
 impl Phenotype {

@@ -14,16 +14,16 @@ The construction of words is such that it is never ambiguous whether a syllable 
 
 |       | K          | L            | M         | N      | P        |
 | ----- | ---------- | ------------ | --------- | ------ | -------- |
-| **E** | One X      | Horiz Slider | Max       |        | Target X |
-| **I** | One Y      | Vert Slider  | Min       |        | Target Y |
 | **A** | Index      | Square Root  | Add       | Negate | Sign     |
-| **U** | Vector Var | Temperature  | Order     | Anchor |          |
+| **E** | I vector   | Horiz Slider | Max       |        | Target X |
+| **I** | J vector   | Vert Slider  | Min       |        | Target Y |
 | **O** | Disorder   | Heat         | Duplicate | Drop   |          |
+| **U** | Vector Var | Temperature  | Order     | Anchor |          |
 
 |       | R          | S          | T    | V          | W          |
 | ----- | ---------- | ---------- | ---- | ---------- | ---------- |
-| **E** | Memory     | X          | Ten  | Activate 1 | Derivative |
-| **I** | Write      | Y          | One  | Activate 2 | Elevation  |
 | **A** | Reciprocal | Multiply   | Five | Magnitude  | Sine       |
-| **U** | Swap       | Scalar Var | Two  | Gravity    | Force      |
+| **E** | Memory     | X scalar   | Ten  | Activate 1 | Derivative |
+| **I** | Write      | Y scalar   | One  | Activate 2 | Elevation  |
 | **O** | Density    |            | Zero | Over       |            |
+| **U** | Swap       | Scalar Var | Two  | Gravity    | Force      |
