@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 mod color;
 mod conduit;
 mod controls;

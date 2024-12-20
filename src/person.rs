@@ -26,7 +26,7 @@ impl Person {
             max_mana,
             target: None,
             stack: Stack::default(),
-            rack: ConduitRack::new(4),
+            rack: ConduitRack::new(5),
             active_spells: ActiveSpells::default(),
         }
     }
