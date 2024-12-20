@@ -56,7 +56,7 @@ fn main() {
             let mut fonts = FontDefinitions::default();
             fonts.font_data.insert(
                 "emoji".into(),
-                FontData::from_static(include_bytes!("../resources/NotoEmoji-Regular.ttf")),
+                FontData::from_static(include_bytes!("../resources/Uiua386.ttf")),
             );
             fonts
                 .families
